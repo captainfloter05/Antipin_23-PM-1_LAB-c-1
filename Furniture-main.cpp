@@ -10,7 +10,7 @@ using namespace std;
 using namespace funcs;
 
 int main() {
-    int flt;
+    int flt=0;
     int flt1, flt2, flt3;
     int n{};
     cout << "n=";
