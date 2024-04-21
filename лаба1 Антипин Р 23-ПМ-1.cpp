@@ -37,17 +37,17 @@ int main() {
         arr[i].setPer(per);
     }
 
-    cout << "created arr (hooray):" << endl;
+    cout << "wth did ya create?:" << endl;
     for (int i = 0; i < n; i++) {
         cout << arr[i].name() << " " << arr[i].material() << " " << arr[i].per() << endl;
     }
     save(arr, n);
 
-    cout << "1 - create, 2 - load, 3 - search, 4 - get outta here" << endl;
+    cout << "<1 - create, 2 - load, 3 - search, 4 - get tf outta here> - take your pick!" << endl;
     cin >> flt;
     switch (flt) {
         case 1: {
-            cout << "1 - create new arr, 2 - change arr, 3 - add new elements for arr, 4 - delete elements from arr" << endl;
+            cout << "<1 - create new bulls**t (i mean, arr), 2 - change your bulls**t, 3 - add new elements & make double bulls**t, 4 - delete elements & make triple bulls**t> take your pick!" << endl;
             cin >> flt1;
             switch (flt1) {
                 case 1: {
@@ -55,7 +55,6 @@ int main() {
                     cin >> n;
                     if (n < 1)
                         return 0;
-
                     Furniture* arr = new Furniture[n];
                     for (int i = 0; i < n; i++) {
                         string name;
@@ -71,8 +70,8 @@ int main() {
                         arr[i].setMaterial(material);
                         arr[i].setPer(per);
                     }
-
-                    cout << "\ncreated arr (hooray):" << endl;
+                    cout << endl;
+                    cout << "wth did ya create again?:" << endl;
                     for (int i = 0; i < n; i++) {
                         cout << arr[i].name() << " " << arr[i].material() << " " << arr[i].per() << endl;
                     }
@@ -80,7 +79,7 @@ int main() {
                     break;
                     }
                 case 2: {
-                    cout << "which string - ";
+                    cout << "pick a string - ";
                     cin >> strnumber;
                     arr=load(n);
                     for (int i = 0; i < n; i++) {
@@ -129,7 +128,7 @@ int main() {
                     break;
                 }
                 case 4: {
-                    cout << "Which string - ";
+                    cout << "pick a string - ";
                     cin >> strnumber;
                     for (int i = 0; i < n; i++) {
                         if (i == strnumber) {
@@ -157,11 +156,10 @@ int main() {
             
         }
         case 2: {
-            cout << "loading from (Furniture.txt): " << endl;
             arr = load(n);
-            cout << "n=" << n << endl;
+            cout << endl;
             if (!arr) {
-                cout << "arr is null (hehehehaw)" << endl;
+                cout << "null (fooled ya)" << endl;
                 return 0;
             }
             for (int i = 0; i < n; i++) {
@@ -179,7 +177,7 @@ int main() {
                     for (int i = 0; i < n; i++) {
                         if (arr[i].name() == fltname)
                             cout << "found->" << arr[i].name() << " " << arr[i].material() << " " << arr[i].per() << endl;
-                        else cout << "not found (hehehehaw)" << endl;
+                        else cout << "not found (ha-ha got you)" << endl;
                     }
                     break;
                 }
@@ -189,7 +187,7 @@ int main() {
                     for (int i = 0; i < n; i++) {
                         if (arr[i].material() == fltmaterial)
                             cout << "found->" << arr[i].name() << " " << arr[i].material() << " " << arr[i].per() << endl;
-                        else cout << "not found (hehehehaw)" << endl;
+                        else cout << "not found (ha-ha got you)" << endl;
                     }
                     break;
                 }
@@ -199,7 +197,7 @@ int main() {
                     for (int i = 0; i < n; i++) {
                         if (arr[i].per() == fltper)
                             cout << "found->" << arr[i].name() << " " << arr[i].material() << " " << arr[i].per() << endl;
-                        else cout << "not found (hehehehaw)" << endl;
+                        else cout << "not found (ha-ha got you)" << endl;
                     }
                     break;
                 }
@@ -208,6 +206,7 @@ int main() {
             }
         }
         case 4: {
+            cout << "Why are you still here? GET OUT" << endl;
             break;
         }
         default:
